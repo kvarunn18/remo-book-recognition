@@ -23,7 +23,7 @@ def get_title_authour_chat_gpt(book_string):
     )
 
     stream = client.chat.completions.create(
-        model="chatgpt-4o-latest",
+        model=os.getenv("OPENAI_MODEL_ID"),
         messages=[{"role": "user", "content": content}],
         temperature=0.7,
         stream=True,
