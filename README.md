@@ -47,13 +47,17 @@ Here are the steps to get an OpenAI API key:
 
 1. Create a new virtual environment:
    ```
-   conda create -n bookreg python
+   conda create -n bookreg python=3.8
    ```
 2. Activate the virtual environment:
      ```
      conda activate bookreg
      ```
-3. Install the required dependencies:
+3. Install PyTorch:
+     ```
+    conda install pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch
+     ```
+4. Install the required dependencies:
    ```
    pip install -r requirements.txt
    ```
