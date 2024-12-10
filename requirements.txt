@@ -1,0 +1,7 @@
+easyocr==1.7.2
+imutils==0.5.4
+numpy==1.24.4
+openai==1.57.1
+opencv_python==4.10.0.84
+python-dotenv==1.0.1
+Requests==2.32.3
