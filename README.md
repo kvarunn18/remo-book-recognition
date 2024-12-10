@@ -30,7 +30,7 @@ Here are the steps to get an OpenAI API key:
 
 ## Prerequisites
 
-- Python 3.x
+- conda
 - pip
 - .env file with the following variables:
 
@@ -47,7 +47,7 @@ Here are the steps to get an OpenAI API key:
 
 1. Create a new virtual environment:
    ```
-   python -m venv bookreg
+   conda create -n bookreg python
    ```
 2. Activate the virtual environment:
      ```
