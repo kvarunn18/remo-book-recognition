@@ -2,6 +2,10 @@
 
 The goal of this project is to develop a system that can scan book covers and extract relevant metadata for database entry. The system should capture both front and back covers and extract key bibliographic information including title, creators, copyright date, summary, series information, genres, form, format, ISBN, page count, and book type.
 
+Team Members:  
+- Karthik Varunn Saseendran - saseendran.k@northeastern.edu | karthikvarunn2002@gmail.com | [LinkedIn](https://www.linkedin.com/in/karthikvarunn/)
+- Paul Adaimi - adaim.p@northeastern.edu | adaimi.paul@gmail.com | [LinkedIn](https://www.linkedin.com/in/paul-adaimi-aa5b76172/)
+
 ## Camera Setup
 
 1. Download and install [**IP Webcam**](https://play.google.com/store/apps/details?id=com.pas.webcam&hl=en) application on your android phone.
