@@ -1,10 +1,12 @@
 # remo-book-recognition
 
-The goal of this project is to develop a system that can scan book covers and extract relevant metadata for database entry. The system should capture both front and back covers and extract key bibliographic information including title, creators, copyright date, summary, series information, genres, form, format, ISBN, page count, and book type.
+The goal of this project is to develop a system that scans book covers and extract relevant metadata for [ReMo's](https://remo.app/) database entry. The system can capture both front and back covers and extract key bibliographic information including title, creators, copyright date, summary, series information, genres, form, format, ISBN, page count, and book type.
 
 Team Members:  
 - Karthik Varunn Saseendran - saseendran.k@northeastern.edu | karthikvarunn2002@gmail.com | [LinkedIn](https://www.linkedin.com/in/karthikvarunn/)
 - Paul Adaimi - adaim.p@northeastern.edu | adaimi.paul@gmail.com | [LinkedIn](https://www.linkedin.com/in/paul-adaimi-aa5b76172/)
+
+# Installation and Usage
 
 ## Camera Setup
 
@@ -76,3 +78,17 @@ Here are the steps to get an OpenAI API key:
    ```
    python main.py
    ```
+
+## Behind the Scenes:
+
+```mermaid
+graph TD
+    A[Run main.py] --> B["take_picture.py<br>Captures book images within defined regions and saves the frames reliably"]
+    B --> C["enhance_img.py<br>Enhances the captured book images by adjusting contrast and removing noise to improve text recognition"]
+    C --> D["text_recog.py<br>Performs text recognition on the enhanced book images using EasyOCR"]
+    D --> E["get_book_data.py<br>Retrieves the title and author of the book using the OpenAI GPT API, and then uses the title and author to make a call to the Google Books API to retrieve the book data in JSON format"]
+    E --> F[Retrieve title and author using OpenAI GPT API]
+    F --> G[Retrieve book data using Google Books API]
+    G --> H[Transform JSON data to required format]
+    H --> I[return book data's transformed json for future insertion in database]
+```
